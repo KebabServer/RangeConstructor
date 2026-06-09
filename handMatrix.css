@@ -1,0 +1,149 @@
+#tooltip-span {
+    width: auto;
+    white-space: nowrap;
+    background-color: #363434;
+    color: #000000;
+    text-align: left;
+   user-select: none;
+
+    /* position: absolute; */
+    /* z-index: 1; */
+}
+
+
+
+.tooltipTable {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Optional: Adjust the gap between the divs */
+}
+
+.tooltipHandDiv {
+    display: flex;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 2px;
+    font-size: 20px;
+    width: 5vw;
+    height: 5vh;
+    
+}
+
+.tooltipHandBackground {
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+.tooltipbetsize {
+    color: #000000;
+    font-size: 10px;
+    padding: 0px;
+    height: 1em;
+}
+
+.tooltipEV {
+    color: #000000;
+    font-size: 14px;
+}
+
+.tooltipdivider {
+    flex: 50%;
+}
+
+.hand-matrix {
+    padding: 30px 30px 0px 0px;
+}
+
+@media (max-width: 600px) {}
+
+.matrixSingleHandDiv {
+    box-sizing: border-box;
+    color: Black;
+    display: inline-block;
+    height: 4vh;
+    width: 70px;
+    font-size: small;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    outline: 1px solid black;
+    padding: 0;
+}
+
+.bottomDiv {
+    display: none;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+}
+
+.topDiv {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+}
+
+.betsize-total {
+    color: Black;
+    outline: 2px solid black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.preflop-total {
+    color: Black;
+    outline: 2px solid black;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    grid-column-start: 12;
+    grid-column-end: 14;
+}
+
+
+.matrixboard-card {
+    border: 2px solid #8a8a8a;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    vertical-align: middle;
+    /* Adjust this value to move the card down */
+
+}
+
+.matrixboard-card::before {
+    content: attr(data-rank);
+    position: middle;
+    font-size: 30px;
+}
+
+.matrixboard-card[data-suit="x"] {
+    color: black;
+    font-weight: bold;
+}
+
+.matrixboard-card[data-suit="♠"] {
+    color: black;
+}
+
+.matrixboard-card[data-suit="♣"] {
+    color: rgb(0, 148, 7);
+}
+
+.matrixboard-card[data-suit="♥"] {
+    color: red;
+}
+
+.matrixboard-card[data-suit="♦"] {
+    color: rgb(0, 3, 204);
+}
+
+.range-switch-div {
+    border-radius: 5px;
+    text-align: center;
+    background-color: gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: bold;
+    border: 2px solid white;
+}
+

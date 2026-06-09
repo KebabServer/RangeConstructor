@@ -1,0 +1,302 @@
+ /* Reset some default margin and padding */
+ @import url('https://fonts.googleapis.com/css?family=Inter');
+
+ * {
+     font-family: 'Inter';
+     /* Dark background color */
+     color: #fff;
+     /* Light font color */
+ }
+
+ body {
+     background-color: #141313;
+     font-size: large;
+     margin: 0;
+     padding: 0;
+ }
+
+
+ h1,
+ h2,
+ h3,
+ h4 {
+
+     margin: 0;
+     padding: 0;
+ }
+
+ h2 {
+     margin-top: 1em;
+     color: coral;
+     font-size: larger;
+
+ }
+
+ .fallacy {
+     color: #cef71b
+ }
+
+ .theorem {
+     color: #38f3da
+ }
+
+ .example {
+     color: #4a65ff
+ }
+
+ .rule {
+     color: #cef71b
+ }
+
+ .yellow {
+     color: #cef71b
+ }
+
+ .red {
+     color: #9c132a
+ }
+
+ .green {
+     color: #03bb2b
+ }
+
+ h3 {
+     color: rgb(63, 158, 103);
+ }
+
+ /* Style the header */
+ header {
+     padding: 20px;
+     text-align: center;
+ }
+
+ p {
+     margin: 10;
+     padding: 10;
+
+ }
+
+ /* Style the article content */
+ #WrappingDiv {
+     max-width: 1400px;
+     margin: 0 auto;
+     padding: 30px;
+     line-height: 1.6;
+     display: flex;
+ }
+
+
+
+
+ /* Add additional styles as needed */
+
+ .massDataSizingTable {
+     width: 100%;
+     border-collapse: collapse;
+     border: 1px solid #ddd;
+     text-align: center;
+     margin: 20px;
+ }
+
+ .massDataSizingTable>thead>tr {
+     border: 1px solid #ddd;
+     background-color: #222222;
+ }
+
+
+
+ .mdftable {
+     width: 100%;
+     border-collapse: collapse;
+     border: 1px solid #ddd;
+
+ }
+
+ .mdftable>thead>tr>th {
+     border: 1px solid #ddd;
+     padding: 8px;
+     text-align: center;
+ }
+
+ .mdftable>tbody>tr>td {
+     border: 1px solid #ddd;
+     padding: 8px;
+     text-align: center;
+ }
+
+ .board {
+     display: flex;
+     /* Use flexbox to align SVGs horizontally */
+ }
+
+ .board>svg {
+     display: inline-block;
+     /* Make SVGs display inline */
+     width: 40px;
+     /* Set the width of each SVG */
+     height: 60px;
+     /* Set the height of each SVG */
+     margin-right: 0px;
+     /* Add some spacing between SVGs */
+
+ }
+
+ svg * {
+     font-family: "Arial";
+ }
+
+ .board> :nth-child(3) {
+     margin-right: 15px;
+ }
+
+ .board> :nth-child(4) {
+     margin-right: 15px;
+ }
+
+ .container {
+     display: flex;
+ }
+
+ img {
+     width: auto;
+     max-width: 100%;
+     height: auto;
+     max-height: 100%;
+
+ }
+
+ .sideways_list {
+     list-style: none;
+ }
+
+ .sideways_list>li {
+     display: inline-block;
+     margin: 20px;
+     font-weight: bold;
+     border: 2px solid rgb(107, 107, 107);
+     padding: 10px;
+ }
+
+ /* Card */
+ .cardText {
+     font-size: 32px;
+     font-weight: bold;
+ }
+
+ .cardTextSuit {
+     font-size: 20px;
+ }
+
+ .inline-card {
+     display: inline-block;
+     border: 2px solid #8a8a8a;
+     border-radius: 5px;
+     padding: 5px;
+     margin: 0 2px;
+     line-height: 1;
+     width: 24px;
+     height: 14px;
+     text-align: center;
+     position: relative;
+     background-color: white;
+     vertical-align: middle;
+     /* Adjust this value to move the card down */
+
+ }
+
+ .inline-card::before {
+     content: attr(data-rank);
+     position: middle;
+     font-size: 18px;
+ }
+
+ .inline-card[data-suit="x"] {
+     color: black;
+     font-weight: bold;
+ }
+
+ .inline-card[data-suit="♠"] {
+     color: black;
+ }
+
+ .inline-card[data-suit="♣"] {
+     color: rgb(0, 148, 7);
+ }
+
+ .inline-card[data-suit="♥"] {
+     color: red;
+ }
+
+ .inline-card[data-suit="♦"] {
+     color: rgb(0, 3, 204);
+ }
+
+ /*Bet size buttons */
+ .BX,
+ .B33,
+ .B60,
+ .B75,
+ .B120,
+ .B133,
+ .B150,
+ .B400,
+ .BAI,
+ .R50,
+ .R100,
+ .R,
+ .F,
+ .C,
+ .BQuestion {
+     display: inline-block;
+     width: 60px;
+     height: 25px;
+     line-height: 25px;
+     border-radius: 5px;
+     border: 2px solid white;
+     text-align: center;
+     color: black;
+     font-size: 18px;
+     font-weight: bold;
+
+     &:before {
+         content: attr(bet_size)
+     }
+ }
+
+ .F {
+     background-color: #7AA0C0;
+ }
+
+ .BX,
+ .C {
+     background-color: #91C282;
+ }
+
+ .B33 {
+     background-color: #f06c00;
+ }
+
+ .B60,
+ .B75 {
+     background-color: #d70000;
+ }
+
+ .BAI {
+     background-color: #4d0000;
+ }
+
+ .B120,
+ .B150,
+ .R50,
+ .R100,
+ .R {
+     background-color: #a557c9;
+ }
+
+ .B400 {
+     background-color: #222222;
+ }
+
+ .BQuestion {
+     background-color: #8a8a8a;
+ }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Range Constructor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="article.css">
+    <link rel="stylesheet" href="handMatrix.css">
+    <style>
+        /* Container styling */
+        .form-group {
+            display: flex;
+            /* Align items horizontally */
+            align-items: center;
+            /* Vertically center input and label */
+            margin-bottom: 10px;
+            /* Spacing between fields */
+        }
+
+        /* Label styling */
+        .form-group label {
+            width: 100px;
+            /* Set a fixed width for labels */
+            text-align: right;
+            /* Align label text to the right */
+            margin-right: 10px;
+            /* Space between label and input */
+        }
+
+        /* Input field styling */
+        .form-group input {
+            color: black;
+            padding: 5px;
+            /* Add some padding inside the input */
+        }
+
+        .button-group {
+            color: black;
+            margin: 20px;
+            padding: 5px;
+        }
+
+        #madehand-classes {
+            height: 500px;
+            width: 310px;
+            border: 1px solid #ccc;
+            /* Adds a border for clarity */
+            margin: 0px;
+            padding: 0px;
+            font-size: medium;
+        }
+
+        #drawinghand-classes {
+            height: 500px;
+            width: 310px;
+            border: 1px solid #ccc;
+            /* Adds a border for clarity */
+            margin: 0px;
+            padding: 0px;
+            font-size: medium;
+        }
+
+        #right-panel {
+            width: 310px;
+            height: 800px;
+            /* Adds a border for clarity */
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-group">
+        <!-- Preflop Range -->
+        <label for="preflopRange_input">Preflop Range:</label>
+        <input type="text" id="preflopRange_input" name="preflopRange_input" placeholder="Preflop range"
+            value="1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0.109999999 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0.109999999 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0.109999999 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0.109999999 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0.185000002 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.185000002 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.185000002 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.185000002 0 0 0 1 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0.595000029 0.595000029 0.595000029 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0.595000029 1 0.595000029 0.595000029 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0.595000029 0.595000029 1 0.595000029 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0.595000029 0.595000029 0.595000029 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0.954999983 0.954999983 0.954999983 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0.954999983 1 0.954999983 0.954999983 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0.954999983 0.954999983 1 0.954999983 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0.954999983 0.954999983 0.954999983 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0.910000026 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0.400000006 0.400000006 0.400000006 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0.910000026 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0.400000006 1 0.400000006 0.400000006 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0.910000026 0 0 0 1 0 0 0 1 0 0 0 1 0 0.400000006 0.400000006 1 0.400000006 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0.910000026 0 0 0 1 0 0 0 1 0 0 0 1 0.400000006 0.400000006 0.400000006 1 1 1 1 1 1 1 1 1 1 1 1 0.920000017 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0.920000017 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0.920000017 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0.920000017 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0.00499999989 0.00499999989 0.00499999989 1 0.790000021 0.790000021 0.790000021 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0.00499999989 1 0.00499999989 0.00499999989 0.790000021 1 0.790000021 0.790000021 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0.00499999989 0.00499999989 1 0.00499999989 0.790000021 0.790000021 1 0.790000021 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0.00499999989 0.00499999989 0.00499999989 1 0.790000021 0.790000021 0.790000021 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 0 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1">
+        <!-- Board -->
+        <label for="board_input">Board:</label>
+        <input type="text" id="board_input" name="board_input" placeholder="Board" value="AsJh6s">
+
+
+
+
+
+        <!-- Bet Range -->
+        <button class="button-group" id="copyBetRangeButton">Copy Bet Range</button>
+        <!-- Check Range -->
+        <button class="button-group" id="copyCheckRangeButton">Copy Check Range</button>
+        <!-- Import Bet Range -->
+        <button class="button-group" id="importBetRangeButton">Import Bet Range</button>
+
+    </div>
+
+
+
+
+    <div id="WrappingDiv">
+        <div id="hand-matrix"></div>
+        <div id="right-panel">
+            <ul id="madehand-classes"></ul>
+            <span id="tooltip-span"> </span>
+        </div>
+        <div id="right-panel">
+            <ul id="drawinghand-classes"></ul>
+        </div>
+    </div>
+
+
+
+
+    <p id="statusMessage"></p>
+
+    <script src="RangeConstructor.js"></script>
+
+</body>
+
+
+</html>
